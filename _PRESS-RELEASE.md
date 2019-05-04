@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Car Maintainence and Task Manager
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > The product is intended for consumers who would like to keep track of car maintainence due dates and tasks.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > This app will allow users to view the cars they own, along with the tasks associated with each car. They can placed reminders for these tasks. For those who want to get even more out of the app, they can also keep track of the tools that they own, materials they have used, and the amount of money they have spent on the car.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > A lot of people have trouble keeping track of all the things they want to do with their car. Some people have so many materials, they forget what they have, and how many materials they have.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > With this task manager, you will be able to create a schedule specifically for your car (or cars). You can set a reminder, and keep track of the costs. If you enjoy working on your car, you can keep track of your many tools and parts, and assign a status for each item.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > A car maintained in a timely manner is a happier car.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just download this app and create a simple profile for your car.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  <!-- > Wrap it up and give pointers where the reader should go next. -->
