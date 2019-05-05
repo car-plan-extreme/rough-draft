@@ -1,31 +1,36 @@
 import React from 'react';
+import ReactTable from 'react-table';
+
 import CarListItem from './CarListItem.jsx';
+import CarForm from './CarForm.jsx';
 
-class CarList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 'date-added',
-    }
-  }
-
+class CarList extends React.PureComponent {
   render() {
     return (
       <div className="car-list">
-        <div className="sort-by">
-          <p> Sort by: </p> 
-          <select>
-            <option value="date-added">Date Added</option>
-            <option value="cost-low">Cost: Low to High</option>
-            <option value="cost-high">Cost: High to Low</option>
-            <option value="year-low">Year: Newest to Oldest</option>
-            <option value="year-high">Year: Oldest to Newest</option>
-            <option value="make">Make</option>
-          </select>
-        </div>
-        <div className="car-list-items">
-          {this.props.cars.forEach((car) => <CarListItem car={car}/>)}
-        </div>
+        <ReactTable 
+          data={this.props.cars}
+          defaultPageSize={5}
+          columns={[
+            {
+              Header: "Cars",
+              columns: [
+                {
+                  Header: "Make",
+                  accessor: "make",
+                },
+                {
+                  Header: "Year",
+                  accessor: "year",
+                },
+                {
+                  Header: "Cost",
+                  accessor: "cost",
+                }
+              ]
+            }
+          ]}
+        />
       </div>
     )
   }
