@@ -15,7 +15,7 @@ CREATE TABLE cars (
 
 CREATE TABLE task_statuses (
   id int NOT NULL,
-  status_code varchar(50) NOT NULL,
+  status_code int NOT NULL,
   PRIMARY KEY (id)
 );
 INSERT INTO task_statuses (id, status_code) VALUES(1, 'Complete'),(2, 'Pending'),(3, 'Missing Parts');
@@ -35,13 +35,14 @@ CREATE TABLE tasks (
 
 CREATE TABLE part_statuses (
   id int NOT NULL,
-  status_code varchar(50) NOT NULL,
+  status_code int NOT NULL,
   PRIMARY KEY (id)
 );
 INSERT INTO part_statuses (id, status_code) VALUES(1, 'Obtained'),(2, 'Pending'),(3, 'Used');
 
 CREATE TABLE parts (
   id int NOT NULL AUTO_INCREMENT,
+  part varchar(50),
   date_bought date,
   cost int,
   status_id int NOT NULL,
