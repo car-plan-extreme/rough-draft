@@ -8,8 +8,14 @@ CREATE TABLE cars (
   id int NOT NULL AUTO_INCREMENT,
   make varchar(50) NOT NULL,
   model varchar(255) NOT NULL,
-  [year] year NOT NULL,
+  year_produced year NOT NULL,
   cost int,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE task_statuses (
+  id int NOT NULL,
+  status_code varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -26,6 +32,12 @@ CREATE TABLE tasks (
     REFERENCES task_statuses(id)
 );
 
+CREATE TABLE part_statuses (
+  id int NOT NULL,
+  status_code varchar(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE parts (
   id int NOT NULL AUTO_INCREMENT,
   date_bought date,
@@ -34,18 +46,6 @@ CREATE TABLE parts (
   PRIMARY KEY (id),
   FOREIGN KEY (status_id)
     REFERENCES part_statuses(id)
-);
-
-CREATE TABLE task_statuses (
-  id int NOT NULL,
-  [status] varchar(50) NO NULL,
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE part_statuses (
-  id int NOT NULL,
-  [status] varchar(50) NO NULL,
-  PRIMARY KEY (id)
 );
 
 /*  Execute this file from the command line by typing:
