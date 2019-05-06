@@ -11,62 +11,46 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      cars: [
-        {
-          car_id: 1,
-          name: null,
-          make: 'Mazda',
-          model: 'Mazda 3',
-          year: 2017,
-          color: null,
-          cost: null,
-        },
-        {
-          car_id: 2,
-          name: null,
-          make: 'Mazda',
-          model: 'MX-5 Miata',
-          year: 2002,
-          color: null,
-          cost: null,
-        }
-      ],
-      tasks: [
-        {
-          task_id: 1,
-          car: 'Mazda 3',
-          task: 'Change oil',
-          due_date: null,
-          ongoing: true,
-          parts_needed: [],
-          details: '',
-          status: 'Complete'
-        }
-      ],
-      parts: [
-        {
-          part_id: 1,
-          name: 'Oil filter',
-          date_bought: null,
-          cost: 7,
-          status: 'Used',
-        }
-      ]
+      cars: [],
+      tasks: [],
+      parts: [],
     }
   }
 
   componentDidMount() {
-    // $.ajax({
-    //   url: '/items', 
-    //   success: (data) => {
-    //     this.setState({
-    //       items: data
-    //     })
-    //   },
-    //   error: (err) => {
-    //     console.log('err', err);
-    //   }
-    // });
+    $.ajax({
+      url: '/cars', 
+      success: (data) => {
+        this.setState({
+          cars: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
+    $.ajax({
+      url: '/tasks', 
+      success: (data) => {
+        this.setState({
+          tasks: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
+    $.ajax({
+      url: '/parts', 
+      success: (data) => {
+        this.setState({
+          parts: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
   }
 
   render () {
