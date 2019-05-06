@@ -14,7 +14,7 @@ class TaskList extends React.PureComponent {
               columns: [
                 {
                   Header: "Car",
-                  accessor: "car",
+                  accessor: "car_id",
                 },
                 {
                   Header: "Due Date",
@@ -22,7 +22,7 @@ class TaskList extends React.PureComponent {
                 },
                 {
                   Header: "Status",
-                  accessor: "status",
+                  accessor: "status_id",
                 }
               ]
             }

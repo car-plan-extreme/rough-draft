@@ -14,7 +14,7 @@ class PartList extends React.Component {
               columns: [
                 {
                   Header: "Part",
-                  accessor: "name",
+                  accessor: "part",
                 }, 
                 {
                   Header: "Cost",
@@ -22,7 +22,7 @@ class PartList extends React.Component {
                 },
                 {
                   Header: "Status",
-                  accessor: "status",
+                  accessor: "status_id",
                 }
               ]
             }
