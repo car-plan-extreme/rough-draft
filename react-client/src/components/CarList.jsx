@@ -20,6 +20,10 @@ class CarList extends React.PureComponent {
                   accessor: "make",
                 },
                 {
+                  Header: "Model",
+                  accessor: "model",
+                },
+                {
                   Header: "Year",
                   accessor: "year",
                 },
