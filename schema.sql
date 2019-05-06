@@ -18,6 +18,7 @@ CREATE TABLE task_statuses (
   status_code varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );
+INSERT INTO task_statuses (id, status_code) VALUES(1, 'Complete'),(2, 'Pending'),(3, 'Missing Parts');
 
 CREATE TABLE tasks (
   id int NOT NULL AUTO_INCREMENT,
@@ -37,6 +38,7 @@ CREATE TABLE part_statuses (
   status_code varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );
+INSERT INTO part_statuses (id, status_code) VALUES(1, 'Obtained'),(2, 'Pending'),(3, 'Used');
 
 CREATE TABLE parts (
   id int NOT NULL AUTO_INCREMENT,
