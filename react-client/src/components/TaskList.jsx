@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactTable from 'react-table';
 
+import TaskForm from './TaskForm.jsx';
+
 class TaskList extends React.PureComponent {
   render() {
     return (
@@ -17,6 +19,10 @@ class TaskList extends React.PureComponent {
                   accessor: "car",
                 },
                 {
+                  Header: "Task",
+                  accessor: "task",
+                },
+                {
                   Header: "Due Date",
                   accessor: "due_date",
                 },
@@ -28,6 +34,7 @@ class TaskList extends React.PureComponent {
             }
           ]}
         />
+        <TaskForm />
       </div>
     );
   }

@@ -9,30 +9,22 @@ class CarForm extends React.Component{
   render() {
     return (
       <div className="car-form">
-        <form>
-          <label>
-            Name: (Optional)
-            <input type="text" name="name" value={this.props.name}/>
-          </label>
+        <form action="/car" method="POST" target="hiddenFrame">
           <label>
             Make: 
-            <input type="text" name="make" value={this.props.make} required />
+            <input type="text" name="make" required />
           </label>
           <label>
             Model:
-            <input type="text" name="model" value={this.props.model} required />
+            <input type="text" name="model" required />
           </label>
           <label>
             Year:
-            <input type="number" name="year" value={this.props.year} min="1885" required />
-          </label>
-          <label>
-            Color: 
-            <input type="color" name="color" value={this.props.year} />
+            <input type="number" name="year_produced" min="1885" required />
           </label>
           <label>
             Cost: (Optional)
-            <input type="number" name="cost" value={this.props.year} min="0" />
+            <input type="number" name="cost" min="0" />
           </label>
           <button>Submit</button>
         </form>

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactTable from 'react-table';
 
+import PartForm from './PartForm.jsx';
+
 class PartList extends React.Component {
   render() {
     return (
@@ -28,6 +30,7 @@ class PartList extends React.Component {
             }
           ]}
         />
+        <PartForm />
       </div>
     );
   }

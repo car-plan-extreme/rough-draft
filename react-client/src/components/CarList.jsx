@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactTable from 'react-table';
 
-import CarListItem from './CarListItem.jsx';
 import CarForm from './CarForm.jsx';
 
 class CarList extends React.PureComponent {
@@ -15,6 +14,10 @@ class CarList extends React.PureComponent {
             {
               Header: "Cars",
               columns: [
+                {
+                  Header: "Id",
+                  accessor: "id"
+                },
                 {
                   Header: "Make",
                   accessor: "make",
@@ -35,6 +38,7 @@ class CarList extends React.PureComponent {
             }
           ]}
         />
+        <CarForm />
       </div>
     )
   }
