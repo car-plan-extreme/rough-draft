@@ -22,7 +22,7 @@ class PartList extends React.Component {
                 },
                 {
                   Header: "Status",
-                  accessor: "status_id",
+                  accessor: "status",
                 }
               ]
             }

@@ -25,7 +25,7 @@ class CarList extends React.PureComponent {
                 },
                 {
                   Header: "Year",
-                  accessor: "year",
+                  accessor: "year_produced",
                 },
                 {
                   Header: "Cost",
