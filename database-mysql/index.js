@@ -44,6 +44,24 @@ var selectAllParts = function(callback) {
   });
 };
 
+var addCar = function(callback, req) {
+  connection.query(`INSERT INTO cars (make, model, year_produced, cost) VALUES ("${req.make}", "${req.model}", ${req.year_produced}, ${req.cost ? req.cost : 'null'})`,
+  callback);
+};
+
+var addTask = function(callback, req) {
+  connection.query(`INSERT INTO tasks (car_id, task, due_date, ongoing, details, status_id) VALUES ("${req.car_id}", "${req.task}", ${req.due_date ? '"' + req.due_date + '"': 'null'}, ${req.ongoing === 'on'}, ${req.details ? req.details : 'null'}, ${req.status_id})`,
+  callback);
+}
+
+var addPart = function(callback, req) {
+  connection.query(`INSERT INTO parts (part, date_bought, cost, status_id) VALUES ("${req.part}", ${req.date_bought === 'null' ? '"' + req.date_bought + '"': 'null'}, ${req.cost ? req.cost : 'null'}, ${req.status_id})`,
+  callback);
+};
+
 module.exports.selectAllCars = selectAllCars;
 module.exports.selectAllTasks = selectAllTasks;
 module.exports.selectAllParts = selectAllParts;
+module.exports.addCar = addCar;
+module.exports.addTask = addTask;
+module.exports.addPart = addPart;
