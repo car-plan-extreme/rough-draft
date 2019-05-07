@@ -15,7 +15,7 @@ CREATE TABLE cars (
 
 CREATE TABLE task_statuses (
   id int NOT NULL,
-  status_code int NOT NULL,
+  status_code varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );
 INSERT INTO task_statuses (id, status_code) VALUES(1, 'Complete'),(2, 'Pending'),(3, 'Missing Parts');
@@ -29,13 +29,15 @@ CREATE TABLE tasks (
   details text,
   status_id int NOT NULL,
   PRIMARY KEY (id),
+  FOREIGN KEY (car_id)
+    REFERENCES cars(id),
   FOREIGN KEY (status_id)
     REFERENCES task_statuses(id)
 );
 
 CREATE TABLE part_statuses (
   id int NOT NULL,
-  status_code int NOT NULL,
+  status_code varchar(50) NOT NULL,
   PRIMARY KEY (id)
 );
 INSERT INTO part_statuses (id, status_code) VALUES(1, 'Obtained'),(2, 'Pending'),(3, 'Used');
