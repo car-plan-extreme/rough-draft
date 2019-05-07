@@ -44,7 +44,7 @@ INSERT INTO part_statuses (id, status_code) VALUES(1, 'Obtained'),(2, 'Pending')
 
 CREATE TABLE parts (
   id int NOT NULL AUTO_INCREMENT,
-  part varchar(50),
+  part varchar(50) NOT NULL,
   date_bought date,
   cost int,
   status_id int NOT NULL,
